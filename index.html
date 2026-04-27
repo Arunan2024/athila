@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Forgive Me ❤️ - Tanglish Apology with Her Photo</title>
+  <!-- Google Fonts for soft feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #ffe6f0 0%, #ffd9e8 100%);
+      font-family: 'Quicksand', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 24 27"><polygon points="2,2 22,13 12,13 12,25 2,13" fill="%23ff4d6d" stroke="%23ffffff" stroke-width="1.5"/><circle cx="8" cy="10" r="1.5" fill="white"/></svg>') 12 5, auto;
+    }
+
+    /* main card */
+    .love-card {
+      max-width: 580px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(2px);
+      border-radius: 68px 48px 72px 48px;
+      box-shadow: 0 30px 40px rgba(255, 80, 120, 0.25), 0 15px 25px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 200, 210, 0.8);
+      animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* header with cute illustration + photo */
+    .cute-header {
+      background: #ffb7c5;
+      padding: 20px 20px 20px;
+      text-align: center;
+      border-bottom: 3px dashed #ff8da1;
+    }
+
+    .cute-header i {
+      font-size: 2.5rem;
+      color: #fff3e0;
+      text-shadow: 2px 2px 0 #ff6f91;
+      margin-bottom: 8px;
+      display: inline-block;
+      animation: bounceHeart 1.5s infinite;
+    }
+
+    @keyframes bounceHeart {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    /* ----- PHOTO FRAME STYLES (HER PHOTO) ----- */
+    .photo-frame {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 12px auto;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #ffffff, #ffd0da);
+      padding: 5px;
+      box-shadow: 0 10px 20px rgba(255, 80, 120, 0.4);
+      transition: transform 0.2s ease;
+      animation: gentlePop 2.5s infinite ease;
+    }
+
+    .photo-frame:hover {
+      transform: scale(1.02);
+    }
+
+    @keyframes gentlePop {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+
+    .gf-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-sizing: border-box;
+      background: #ffeef2;
+    }
+
+    .photo-caption {
+      font-size: 0.85rem;
+      color: #fff1e6;
+      font-weight: 700;
+      margin-top: 8px;
+      background: rgba(255, 111, 145, 0.6);
+      display: inline-block;
+      padding: 4px 16px;
+      border-radius: 40px;
+      backdrop-filter: blur(2px);
+      letter-spacing: 0.5px;
+    }
+
+    .cute-header h1 {
+      font-size: 1.9rem;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      text-shadow: 2px 2px 0 #ff5e7e;
+      font-weight: 700;
+      margin: 5px 0;
+    }
+
+    .cute-header p {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #fff1e6;
+      background: rgba(0,0,0,0.1);
+      display: inline-block;
+      border-radius: 40px;
+      padding: 5px 18px;
+      margin-top: 8px;
+    }
+
+    /* content area */
+    .message-area {
+      padding: 28px 26px 20px;
+    }
+
+    .apology-text {
+      background: #fffafc;
+      border-radius: 50px 30px 50px 30px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      box-shadow: inset 0 1px 4px #ffcdd9, 0 8px 12px rgba(0,0,0,0.02);
+      border: 1px solid #ffe2ea;
+    }
+
+    .tanglish-msg {
+      font-size: 1.3rem;
+      line-height: 1.55;
+      font-weight: 500;
+      color: #a13e54;
+      text-align: center;
+    }
+
+    .tanglish-msg span {
+      display: inline-block;
+      background: #ffeef2;
+      padding: 4px 10px;
+      border-radius: 60px;
+      font-size: 1rem;
+      margin: 5px 2px;
+    }
+
+    .reason {
+      background: #fff0f3;
+      border-radius: 35px;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-left: 8px solid #ff8aa8;
+    }
+
+    .reason p {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #b14c66;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .reason i {
+      font-size: 1.8rem;
+      color: #ff6f91;
+    }
+
+    /* promise box */
+    .promise-box {
+      background: #ffe1e8;
+      border-radius: 55px;
+      padding: 18px;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+
+    .promise-box p {
+      font-weight: 700;
+      color: #b13052;
+      font-size: 1.1rem;
+    }
+
+    .small-note {
+      font-size: 0.9rem;
+      color: #e06c8a;
+      margin-top: 8px;
+    }
+
+    /* button and forgive section */
+    .forgive-section {
+      text-align: center;
+      margin: 20px 0 10px;
+    }
+
+    .forgive-btn {
+      background: linear-gradient(135deg, #ff859f, #ff5e7e);
+      border: none;
+      padding: 16px 28px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      font-family: 'Quicksand', sans-serif;
+      color: white;
+      border-radius: 60px;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 7px 0 #aa3e58;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .forgive-btn:active {
+      transform: translateY(3px);
+      box-shadow: 0 4px 0 #aa3e58;
+    }
+
+    .forgive-btn i {
+      font-size: 1.5rem;
+    }
+
+    /* response message */
+    .response-message {
+      margin-top: 18px;
+      background: #d9f0ec;
+      border-radius: 60px;
+      padding: 12px;
+      font-weight: 600;
+      color: #1f6e5c;
+      font-size: 1rem;
+      text-align: center;
+      transition: 0.25s;
+      border: 1px solid #b8e1d9;
+      display: none;
+    }
+
+    .response-message.show {
+      display: block;
+      animation: wiggle 0.4s ease;
+    }
+
+    @keyframes wiggle {
+      0% { transform: scale(0.9); opacity: 0; }
+      80% { transform: scale(1.02); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* footer */
+    .footer {
+      background: #ffd4df;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.8rem;
+      color: #b14c66;
+      font-weight: 600;
+    }
+
+    /* floating hearts */
+    .floating-heart {
+      position: fixed;
+      pointer-events: none;
+      font-size: 1.4rem;
+      animation: heartFly 1.2s ease-out forwards;
+      z-index: 999;
+    }
+
+    @keyframes heartFly {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(0.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-120px) scale(1.2);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .love-card {
+        border-radius: 48px 36px 52px 36px;
+      }
+      .tanglish-msg {
+        font-size: 1.1rem;
+      }
+      .forgive-btn {
+        padding: 12px 20px;
+        font-size: 1.2rem;
+      }
+      .photo-frame {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="love-card">
+  <div class="cute-header">
+    <!-- ========== HER PHOTO SECTION ========== -->
+    <!-- IMPORTANT: Replace "her-photo.jpg" with your girlfriend's actual image file name or path -->
+    <!-- Example: "mygirl.jpg", "images/mybaby.png", or a full URL -->
+    <div class="photo-frame">
+      <img src="1.jpeg" alt="My Cutie Athila💕" class="gf-photo" onerror="this.onerror=null;">
+    </div>
+    
+    <!-- ====================================== -->
+    
+    <i class="fas fa-heartbeat"></i>
+    <h1>💖 Forgive MY Chellam Athila 💖</h1>
+    <p>✨ romba romba sorry di ✨</p>
+  </div>
+
+  <div class="message-area">
+    <div class="apology-text">
+      <div class="tanglish-msg">
+        🌸 <strong>Unna vida nenaichchaen, but pesala nu feel pandriya?</strong> 🌸<br>
+        <span>💬 "Naan romba busy nu solla maatten"</span><br>
+        <span>💬 "Seriously naan thappu panniten"</span><br>
+        <span>💬 "Nee enaku romba important"</span><br>
+        🤗 <strong>Ippo un munnadi ninu oru chinna website la forgive kekkuren</strong> 🤗
+      </div>
+    </div>
+
+    <div class="reason">
+      <p>
+        <i class="fas fa-comment-slash"></i> 
+        <span><strong>Correct ah solanumna:</strong> naan romba kashtama pesala, unakku badha. aana en ullae nee mattum dhaan special. Ini naan konjam pesanum, konjam time edukkuren, but unna love panradhu nikkadhu. ❤️</span>
+      </p>
+    </div>
+
+    <div class="promise-box">
+      <p><i class="fas fa-hand-peace"></i> Promise from my heart 💘</p>
+      <p>✨ "Ipo thodangum puthu kadhaliya pesuven, un ponnu manasula naan iruppen, unmaiya pesuven, time edukkuren unakaga" ✨</p>
+      <div class="small-note">💌 <i class="fas fa-clock"></i> daily calls, texts & cute surprises varum! un photo paatha romba sandhosham💖</div>
+    </div>
+
+    <div class="forgive-section">
+      <button class="forgive-btn" id="forgiveBtn">
+        <i class="fas fa-check-circle"></i> Forgive pannidu ma! 💕
+      </button>
+      <div id="responseMsg" class="response-message">
+        ❤️‍🩹 <strong>Thanks kanmani!</strong> ❤️‍🩹 <br>
+        Un forgive en life ku romba arumai. Nee en heart full happiness. Ini naan pesuven, unna care pannuven. <i class="fas fa-kiss-wink-heart"></i> <br>
+        <span style="font-size:0.85rem;">✨ Un photo paathu innum romba sandhosama irukken ✨</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <i class="fas fa-heart" style="color:#ff5e7e;"></i> un ponnu paiyan love pannuravan <i class="fas fa-heart" style="color:#ff5e7e;"></i> <br>
+    #TanglishLoveWithHerPhoto
+  </div>
+</div>
+
+<script>
+  // Forgive button logic with cute floating hearts + show message
+  const forgiveBtn = document.getElementById('forgiveBtn');
+  const responseDiv = document.getElementById('responseMsg');
+
+  // function to create floating hearts in the background
+  function createFloatingHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('floating-heart');
+    const heartList = ['❤️', '💖', '💗', '💓', '🌸', '✨', '💕', '💘', '🌷', '🥰'];
+    heart.innerHTML = heartList[Math.floor(Math.random() * heartList.length)];
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.bottom = '0px';
+    heart.style.fontSize = Math.random() * 20 + 16 + 'px';
+    heart.style.position = 'fixed';
+    document.body.appendChild(heart);
+    setTimeout(() => {
+      heart.remove();
+    }, 1300);
+  }
+
+  function burstHearts(count = 16) {
+    for (let i = 0; i < count; i++) {
+      setTimeout(() => createFloatingHeart(), i * 60);
+    }
+  }
+
+  forgiveBtn.addEventListener('click', () => {
+    // show sweet response if not already visible
+    if (!responseDiv.classList.contains('show')) {
+      responseDiv.classList.add('show');
+    } else {
+      responseDiv.style.transform = 'scale(1.02)';
+      setTimeout(() => { responseDiv.style.transform = ''; }, 200);
+    }
+    
+    // trigger floating hearts celebration
+    burstHearts(22);
+    
+    // change button text after forgiveness
+    forgiveBtn.innerHTML = '<i class="fas fa-heart"></i> Thank you baby! 🥺❤️';
+    forgiveBtn.disabled = true;
+    forgiveBtn.style.opacity = '0.85';
+    forgiveBtn.style.cursor = 'default';
+    
+    // background color festive change
+    document.body.style.background = "linear-gradient(145deg, #fff0f5, #ffe0ea)";
+    setTimeout(() => {
+      document.body.style.background = "linear-gradient(145deg, #ffe6f0 0%, #ffd9e8 100%)";
+    }, 900);
+    
+    // update title for cuteness
+    document.title = "💖 Forgiven! Love You da 💖";
+    setTimeout(() => {
+      document.title = "Forgive Me ❤️ - Tanglish Apology";
+    }, 5000);
+
+    // make love-card glow
+    const card = document.querySelector('.love-card');
+    card.style.transition = 'all 0.2s';
+    card.style.boxShadow = '0 0 0 4px #ffb7c5, 0 0 0 8px #ffd9e8, 0 25px 35px rgba(255,80,120,0.5)';
+    setTimeout(() => {
+      card.style.boxShadow = '0 30px 40px rgba(255, 80, 120, 0.25), 0 15px 25px rgba(0,0,0,0.1)';
+    }, 1000);
+    
+    // extra cute: also animate the photo frame
+    const photoDiv = document.querySelector('.photo-frame');
+    if(photoDiv) {
+      photoDiv.style.animation = 'none';
+      photoDiv.offsetHeight;
+      photoDiv.style.animation = 'gentlePop 0.5s ease';
+      setTimeout(() => {
+        photoDiv.style.animation = 'gentlePop 2.5s infinite ease';
+      }, 600);
+    }
+  });
+
+  // Click any place except button to get mini hearts (interactive)
+  const wholeCard = document.querySelector('.love-card');
+  wholeCard.addEventListener('click', (e) => {
+    if (e.target === forgiveBtn || forgiveBtn.contains(e.target)) return;
+    for(let i=0; i<5; i++) {
+      setTimeout(() => createFloatingHeart(), i*40);
+    }
+    const headerIcon = document.querySelector('.cute-header i');
+    if(headerIcon) {
+      headerIcon.style.animation = 'none';
+      headerIcon.offsetHeight;
+      headerIcon.style.animation = 'bounceHeart 1.5s infinite';
+    }
+  });
+  
+  // welcome loading hearts
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      for (let i = 0; i < 8; i++) {
+        setTimeout(() => createFloatingHeart(), i * 90);
+      }
+    }, 400);
+    console.log("%c🌸 En lovable girlfriend, un photo vaikum 🌸", "color: #ff5e7e; font-size: 15px; font-weight: bold;");
+    console.log("%cTanglish heart beats only for you 💖", "color: #b14c66;");
+    
+    // Fallback for image if user forgets to change 'her-photo.jpg'
+    const gfImg = document.querySelector('.gf-photo');
+    if (gfImg) {
+      gfImg.addEventListener('error', function() {
+        console.log("✨ Tip: Replace 'her-photo.jpg' with your girlfriend's actual photo! ✨");
+        this.alt = "💕 My cutie 💕";
+        this.style.objectFit = "contain";
+        this.style.background = "#ffe2ea";
+      });
+    }
+  });
+  
+  // extra floating hearts sometimes on mouse move (optional but cute)
+  let lastMove = 0;
+  document.addEventListener('mousemove', (e) => {
+    const now = Date.now();
+    if (now - lastMove > 300) {
+      lastMove = now;
+      if (Math.random() > 0.85) {
+        const heartSpan = document.createElement('div');
+        heartSpan.classList.add('floating-heart');
+        heartSpan.innerHTML = '💕';
+        heartSpan.style.left = e.clientX + 'px';
+        heartSpan.style.top = e.clientY - 10 + 'px';
+        heartSpan.style.fontSize = '18px';
+        heartSpan.style.position = 'fixed';
+        document.body.appendChild(heartSpan);
+        setTimeout(() => heartSpan.remove(), 1000);
+      }
+    }
+  });
+</script>
+
+<!-- 
+  ========== HOW TO ADD YOUR GIRLFRIEND'S REAL PHOTO ==========
+  1. Save this HTML file in a folder.
+  2. Place your girlfriend's photo in the SAME folder.
+  3. Rename the photo to "her-photo.jpg" (or change the src in the img tag).
+  
+  Example: if your photo is named "mybaby.png", change:
+  <img src="her-photo.jpg" ...>   <img src="mybaby.png" ...>
+  
+  You can also use a full web link (like from Google Drive or Imgur).
+  
+  The photo will appear in a beautiful circular frame at the top!
+  If the image fails to load, it shows a cute placeholder.
+-->
+</body>
+</html>
